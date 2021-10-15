@@ -1,0 +1,37 @@
+// testing.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+float roundV1, hours, minutes;
+
+float rounding(float a)
+{
+     roundV1 = a / 30;
+     roundV1 = round(roundV1);
+     return roundV1 * 30;
+}
+
+
+
+
+
+int main()
+{
+    float min, hr, final;
+    float time = 12.40;
+
+    hours = floor(time);
+    minutes = (time - floor(time)) * 60;
+    //CHALLENGE: ROUND TO NEAREST HALF HOUR
+    cout << round(time);
+
+
+
+
+    min = rounding(minutes);
+    
+    cout << "\n\n\n" << hours << "h " << min << "m.";
+
+}
+
